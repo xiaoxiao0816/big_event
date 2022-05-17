@@ -26,7 +26,7 @@ $(function() {
     $('#form-reg').on('submit', function(e) {
         e.preventDefault()
        
-        $.post('http://www.liulongbin.top:3007/api/reguser',{
+        $.post('/api/reguser',{
             username: $('#form-reg [name=username]').val(),password: $('#form-reg [name=password]').val()},function(res) {
                 if(res.status !== 0){
                     return layer.msg(res.message)
@@ -43,14 +43,14 @@ $(function() {
     $('#form-login').on('submit', function(e) {
         e.preventDefault()
         
-        $.post('http://www.liulongbin.top:3007/api/login',{
+        $.post('/api/login',{
             username: $('#form-login [name=username]').val(),password: $('#form-login [name=password]').val()},function(res) {
                 if(res.status !== 0){
                     return layer.msg(res.message)
                 }
                 layer.msg('登录成功')
                 localStorage.setItem('token',res.token)
-                location.href = '/momo.html'
+                location.href = 'file:///Users/panyuying/Desktop/code/大事件/momo.html'
                 
             }
         )
