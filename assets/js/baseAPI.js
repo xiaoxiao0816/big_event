@@ -13,7 +13,7 @@ $.ajaxPrefilter(function(options) {
     options.complete = function(res) {
         if(res.responseJSON.status === 1) {
             localStorage.removeItem('token')
-            location.href = 'file:///Users/panyuying/Desktop/code/%E5%A4%A7%E4%BA%8B%E4%BB%B6/login.html'
+            location.href = '../../login.html'
         }
     }
     

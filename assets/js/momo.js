@@ -6,7 +6,7 @@ $(function() {
     $('#out').on('click', function() {
         layer.confirm('是否确认退出？', function(index){
             localStorage.removeItem('token')
-            location.href = 'file:///Users/panyuying/Desktop/code/%E5%A4%A7%E4%BA%8B%E4%BB%B6/login.html'
+            location.href = '../../login.html'
             layer.close(index);
           });  
     })
@@ -37,7 +37,7 @@ function getUserinfo(){
 }
 
 function renderAvatar(user){
-    let username = user.username || nickname
+    let username = user.nickname || user.username
     $('.welcome').html(username)
     if(user.user_pic !== null) {
         //渲染图片头像

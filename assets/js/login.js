@@ -50,7 +50,7 @@ $(function() {
                 }
                 layer.msg('登录成功')
                 localStorage.setItem('token',res.token)
-                location.href = 'file:///Users/panyuying/Desktop/code/大事件/momo.html'
+                location.href = '../../momo.html'
                 
             }
         )
